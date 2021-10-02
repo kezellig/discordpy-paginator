@@ -133,8 +133,8 @@ class PaginationView(discord.ui.View):
         )
 
     # Starting the pagination view
-    async def start(self, ctx, notification_context):
-        self.message = await notification_context.send(
+    async def start(self, ctx, notification_ctx):
+        self.message = await notification_ctx.send(
             embed=self.embed_list[0], view=self
         )
         self.user = ctx.author
